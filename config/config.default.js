@@ -11,7 +11,8 @@ module.exports = appInfo => {
 
   //关闭默认的安全校验
   config.security={
-    csrf: false
+    csrf: false,
+   // domainWhiteList: [ 'http://localhost:8080' ]
   };
 
   // 跨域请求配置
