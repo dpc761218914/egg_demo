@@ -4,10 +4,13 @@
  * @param {Egg.Application} app - egg application
  */
 module.exports = app => {
+  //-----------前端入口--------
   //学生模块
-  require('./router/student')(app);
+  require('./router/foreend/student')(app);
   //教师模块
-  require('./router/teacher')(app);
+  require('./router/foreend/teacher')(app);
   //综合
-  require('./router/test')(app);
+  require('./router/foreend/test')(app);
+  //-----------后端入口--------
+  //-----------微信入口--------
 };

@@ -13,7 +13,10 @@ class TeacherController extends Controller {
         //获取body请求参数
         //const mobile= ctx.request.body.mobile;
         const res = await service.zmteacher.list();
-        ctx.helper.success({ctx, res})
+
+        const msg='ok';
+
+        ctx.helper.success({ctx, res,msg})
     }
 
 }

@@ -11,9 +11,15 @@ class StudentController extends Controller {
     const { ctx,service } = this;
     //获取body请求参数
     //const mobile= ctx.request.body.mobile;
-      const res = await service.zmstudent.list();
-      ctx.helper.success({ctx, res})
-
+     /* const res = await service.student.list();
+      this.ctx.body = res;*/
+    const res={data:'mydatalist'};
+    const msg=ctx.response.ResponseMsg.NO_AUTH;
+    if(1){
+      //如果用户提交参数有误，需要返回异常的情况
+      ctx.helper.fail({ctx,msg,res});
+    }else{}
+    ctx.helper.success({ctx,msg,res});
   }
 
 }
